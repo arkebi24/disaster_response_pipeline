@@ -69,6 +69,7 @@ def build_model():
         Best found model
     '''
     # Create pipeline for data preprocessing and model training
+    #Improved Pipeline using LogisticRegression
     pipe = Pipeline([
         ('vec', TfidfVectorizer()),
         ('clf', MultiOutputClassifier(MyLogisticRegression(random_state=RANDOM_STATE), n_jobs=1))
